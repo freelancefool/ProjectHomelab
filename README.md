@@ -10,7 +10,7 @@ My attempt at learning docker. This will not be anything special.
     2. Containers seem interesting. I like the idea of applications running in their own space. 
 3. As I understand how to manage Splunk within Docker containers and learn Docker in general, expand this lab.
     1. Splunk
-    * Again this is about learning how to manage Splunk in a container as step 1.
+        * Again this is about learning how to manage Splunk in a container as step 1.
     2. Dokuwiki
     * I think it would be fun to throw all of the documentation for this project into a Wiki. Dokuwiki seems easy to manage and maintain.
     3. nginx
