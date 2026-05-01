@@ -1,0 +1,1 @@
+Splunk.License goes in the splunk-include folder as the configuration is written. This folder does not exist when empty. This is a QoL improvement.
