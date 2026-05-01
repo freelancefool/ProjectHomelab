@@ -1,0 +1,30 @@
+#volumes:
+#  splunk-var:
+#  splunk-etc:
+
+services:
+  splunk:
+    image: ${SPLUNK_IMAGE:-splunk/splunk:latest}
+    container_name: splunk
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
+      # Swap out $token with an actual HEC token.
+      #- SPLUNK_HEC_TOKEN=$token
+      # Instead of using a volume path, this can be a valid URI.
+      - SPLUNK_LICENSE_URI=/tmp/license/Splunk.License
+      # The below apps are Splunk_TA_windows, Splunk_TA_nix
+      - SPLUNK_APPS_URL=https://splunkbase.splunk.com/app/742/release/10.0.1/download,https://splunkbase.splunk.com/app/833/release/10.2.0/download
+      # If using Splunkbase to pull apps, uncomment the following 2 lines. Swap $username with a functional username.
+      - SPLUNKBASE_USERNAME
+      - SPLUNKBASE_PASSWORD
+      - SPLUNK_PASSWORD
+    ports:
+      - 8000:8000
+      - 8088:8088
+      - 8089:8089
+      - 9997:9997
+    volumes:
+      - ./splunk-include/Splunk.License:/tmp/license/Splunk.License
+      #- splunk-var:/opt/splunk/var
+      #- splunk-etc:/opt/splunk/etc

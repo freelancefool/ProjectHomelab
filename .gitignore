@@ -1,0 +1,6 @@
+# Never include the License file.
+Splunk.License
+
+# Ignore OS files
+.DS_Store
+.DS_Store?
