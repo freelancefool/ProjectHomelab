@@ -35,7 +35,7 @@ In the future, I will need to either tokenize the SPLUNK_PASSWORD or pass the ar
 
 The Docker Compose startup command will look something like this:
 ```SPLUNKBASE_USERNAME="$splunkbase_username" SPLUNKBASE_PASSWORD="$splunkbase_password" SPLUNK_PASSWORD="$password" docker-compose up -d```
-While working on passing a randomized password to docker-compose, I learned that it needs to be in double quotes to work. Probably obvious, but I'm going to point it out.
+While working on passing a randomized password to docker-compose, I learned that it needs to be in double quotes to work. Probably obvious, but I'm going to point it out. I also learned that `docker-compose` is specific to WSL, which is where I wrote this originally. It works fine on RHEL 10 without the hyphen.
 
 From the Splunk docs:
 
