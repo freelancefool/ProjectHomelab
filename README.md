@@ -69,13 +69,15 @@ Some of this will be hard. This test box has been in use for a while. Hopefully,
 
 To make it easy to track the ports in use with the homelab, have a table:
 
-| Port  | Service   | Context         |
-| ----- | --------- | --------------- |
-| 8000  | Splunk    | Web UI          |
-| 8080  | dokuwiki  | Web UI          |
-| 8088  | Splunk    | HEC listener    |
-| 8089  | Splunk    | Splunk API      |
-| 9997  | Splunk    | Splunk receiver |
+| Port  | Service   | Context               |
+| ----- | --------- | --------------------- |
+| 8000  | Splunk    | Splunk Web Access     |
+| 8065  | Splunk    | App Key Value Store   |
+| 8080  | dokuwiki  | Web UI                |
+| 8088  | Splunk    | HEC listener          |
+| 8089  | Splunk    | REST API              |
+| 8191  | Splunk    | App Key Value Store   |
+| 9997  | Splunk    | Splunk receiver       |
 
 ### Packages
 
