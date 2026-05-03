@@ -1,6 +1,6 @@
-#volumes:
-#  splunk-var:
-#  splunk-etc:
+volumes:
+  splunk-var:
+  splunk-etc:
 
 services:
   splunk:
@@ -21,10 +21,12 @@ services:
       - SPLUNK_PASSWORD
     ports:
       - 8000:8000
+      - 8065:8065
       - 8088:8088
       - 8089:8089
+      - 8191:8191
       - 9997:9997
     volumes:
       - ./splunk-include/Splunk.License:/tmp/license/Splunk.License
-      #- splunk-var:/opt/splunk/var
-      #- splunk-etc:/opt/splunk/etc
+      - splunk-var:/opt/splunk/var
+      - splunk-etc:/opt/splunk/etc
